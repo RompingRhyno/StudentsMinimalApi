@@ -38,6 +38,9 @@ if (app.Environment.IsDevelopment())
 
 }
 
+// Redirect HTTP to HTTPS
+app.UseHttpsRedirection();
+
 var route = app.MapGroup("/api/students");
 
     route.MapGet("/", StudentService.GetAllStudents);
